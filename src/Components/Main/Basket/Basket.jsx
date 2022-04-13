@@ -1,5 +1,5 @@
 import React from 'react';
-import './Basket.css'
+import './Basket.css';
 
 const Basket = ({quantity=0, handleBasketShow, isBasketShow}) => {
   return (
@@ -10,4 +10,4 @@ const Basket = ({quantity=0, handleBasketShow, isBasketShow}) => {
   )
 }
 
-export default Basket
+export default Basket;

@@ -1,18 +1,13 @@
-import React from 'react'
-
-
+import React from 'react';
 import Shop from './Shop/Shop';
 
 
 const Main = (props) => {
+    return (
+        <main className="Main">
+            <Shop {...props} />
+        </main>
+    )
+};
 
-  return (
-    <main className="Main">
-      
-      <Shop {...props} />
-      
-    </main>
-  )
-}
-
-export default Main
+export default Main;

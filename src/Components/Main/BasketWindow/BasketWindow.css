@@ -11,10 +11,8 @@
 }
 
 .basketWindow-main{
-    
     height: 400px;
-    
-    overflow-y: scroll;   
+    overflow-y: scroll;
 }
 
 .basketWindow-header > i {
@@ -36,6 +34,7 @@
 }
 
 .basketWindow-footer > h6 {
+    width: 100px;
     margin-left: 20px;
     margin-top: 25px;
 }
@@ -55,6 +54,32 @@
         top: 50%;
         opacity: 1;
     }
+}
+
+@media screen and (max-width: 600px) {
+    .basketWindow{
+        width: 400px;
+    }
+
+    .basketWindow-footer > h5 {
+        margin-top: 10px;
+    }
+
+    .basketWindow-footer > h6 {
+        margin-top: 20px;
+    }
+
+    .basketWindow-footer > a{
+        margin-left: 80px;
+        margin-top: 10px;
+    }
+
+    .basketWindow-header > i {
+        margin-left: 370px;
+
+    }
+
+
 }
 
 

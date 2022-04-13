@@ -1,15 +1,26 @@
 import React from 'react';
-import "./BasketWindowItem.css"
+import "./BasketWindowItem.css";
 
 
-const BasketWindowItem = ({ name, description, full_background, price, quantity, id, reduceQuantity, addQuantity, deleteOrder,}) => {
+const BasketWindowItem = (props) => {
 
-    
+    const {
+        name,
+        description,
+        full_background,
+        price,
+        quantity,
+        id,
+        reduceQuantity,
+        addQuantity,
+        deleteOrder,
+    } = props;
+
     return (
         <>
             <div className='basketWindowItem'>
 
-                <img src={full_background} />
+                <img src={full_background} alt={name}/>
 
                 <div className='info'>
                     <h5>{name}</h5>
@@ -18,9 +29,9 @@ const BasketWindowItem = ({ name, description, full_background, price, quantity,
                 </div>
 
                 <div className='order-quantity'>
-                    <a className="waves-effect waves-light btn-small " onClick={ () => addQuantity(id)}>+</a>
+                    <a className="waves-effect waves-light btn-small " onClick={() => addQuantity(id)}>+</a>
                     <h5>{quantity}</h5>
-                    <a className="waves-effect waves-light btn-small" onClick={ () => reduceQuantity(id)}>-</a>
+                    <a className="waves-effect waves-light btn-small" onClick={() => reduceQuantity(id)}>-</a>
                 </div>
 
                 <div className='order-del-btn' onClick={() => deleteOrder(id)}>
@@ -28,12 +39,10 @@ const BasketWindowItem = ({ name, description, full_background, price, quantity,
                 </div>
 
 
-
-
             </div>
 
         </>
     )
-}
+};
 
-export default BasketWindowItem
+export default BasketWindowItem;

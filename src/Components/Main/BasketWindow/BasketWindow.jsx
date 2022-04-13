@@ -1,46 +1,40 @@
 import React from 'react';
-import "./BasketWindow.css"
+import "./BasketWindow.css";
 import BasketWindowItem from './BasketWindowItem/BasketWindowItem';
 
-const BasketWindow = ({ orders, addQuantity, reduceQuantity, deleteOrder, handleBasketShow }) => {
+const BasketWindow = ({orders, addQuantity, reduceQuantity, deleteOrder, handleBasketShow}) => {
 
-  let totalPrice = orders.reduce((sum, order) => {
-    
-      return sum + order.quantity * order.price;
+    let totalPrice = orders.reduce((sum, order) => {
 
-  }, 0);      
+        return sum + order.quantity * order.price;
 
+    }, 0);
 
+    return (
 
-  
+        <div className='basketWindow'>
+            <div className='basketWindow-header' onClick={() => handleBasketShow()}>
+                <i className="small material-icons">close</i>
+            </div>
+            <div className='basketWindow-main'>
 
-  return (
+                {
+                    orders.map((order) => <BasketWindowItem key={order.id} deleteOrder={deleteOrder}
+                                                            addQuantity={addQuantity}
+                                                            reduceQuantity={reduceQuantity}
+                                                            {...order} />)
+                }
 
-    <div className='basketWindow'>
+            </div>
+            <div className="basketWindow-footer">
+                <h5>Total price</h5>
+                <h6><b>{totalPrice} AMD.</b></h6>
 
-      <div className='basketWindow-header' onClick={() => handleBasketShow()}>
-        <i className="small material-icons">close</i>
-      </div>
+                <a href="#!" className="waves-effect waves-light btn">Pay</a>
+            </div>
 
-      <div className='basketWindow-main'>
-        {
-          orders.map((order) => <BasketWindowItem key={order.id} deleteOrder={deleteOrder} addQuantity={addQuantity} reduceQuantity={reduceQuantity}  {...order} />)
-        }
-      </div>
-
-      <div className="basketWindow-footer">
-
-          <h5>Total price</h5>
-          <h6><b>{totalPrice} AMD.</b></h6>
-          
-          <a className="waves-effect waves-light btn">Pay</a>
-          
-      </div>
-
-
-
-    </div>
-  )
+        </div>
+    )
 }
 
-export default BasketWindow
+export default BasketWindow;
