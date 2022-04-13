@@ -1,0 +1,60 @@
+.basketWindow{
+    position: fixed;
+    width: 800px;
+    transform: translate(-50%, -50%);    
+    top:50%;
+    left:50%;
+    background-color: #f0f8ff;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+    animation: show 500ms ease-in-out;
+}
+
+.basketWindow-main{
+    
+    height: 400px;
+    
+    overflow-y: scroll;   
+}
+
+.basketWindow-header > i {
+    margin-left: 770px;
+    cursor: pointer;
+    color: #26a69a;
+}
+
+.basketWindow-footer{
+    display: flex;
+    background-color: #cee8ff;
+    height: 60px;
+    
+}
+
+.basketWindow-footer > a{
+    margin-left: 450px;
+    margin-top: 10px;
+}
+
+.basketWindow-footer > h6 {
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.basketWindow-footer > h5 {
+    
+    margin-left: 20px;
+}
+
+@keyframes show {
+    from {
+        top: 30%;
+        opacity: 0;
+    }
+    
+    to {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+

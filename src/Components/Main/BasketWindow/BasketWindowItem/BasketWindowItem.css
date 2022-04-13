@@ -1,0 +1,51 @@
+.basketWindowItem {
+    display: flex;
+    height: 125px;
+
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px,
+        rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px,
+        rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    margin: 10px;
+    background-color: rgb(252, 246, 239);
+    border-radius: 5px;
+}
+
+.basketWindowItem > img {
+    width: 130px;
+    padding: 5px;
+}
+
+.basketWindowItem .info {
+    margin-left: 15px;
+    overflow: hidden;
+    width: 600px;
+    
+   
+}
+
+.order-del-btn{
+    margin-left: auto;
+    margin-top: 50px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.order-quantity a {
+    width: 40px;
+    height: 30px;
+    
+
+    
+}
+
+.order-quantity > h5{
+    text-align: center;
+    margin: 5px;
+}
+
+.order-quantity{
+    margin: 15px ;
+}

@@ -1,0 +1,25 @@
+.basket{
+   position: fixed;
+   bottom: 4.5rem;
+   right: 3rem;
+   cursor: pointer;
+   z-index: 5;
+   
+}
+
+.basket i {
+    border-radius: 50%;
+}
+
+.order_count{
+    margin: 0;
+    background-color: red;
+    position: absolute;
+    width: 20px;
+    text-align: center;
+    z-index: 5;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+
+}

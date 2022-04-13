@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav {
+  padding: 0 1rem;
+}
+
+.Header-logo{
+  width: 100px;
+  margin: 10px;
+  
+}
+
+.brand-logo-text{
+  left:120px;
+  
+  
+}
+
+.Main {
+  min-height: calc(100vh - 62px - 70px);
+  background-color: #dbebff;
+  
+}
+
+.Shop {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+

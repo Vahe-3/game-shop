@@ -1,0 +1,30 @@
+.hint{
+    width: 150px;
+    height: 100px;
+    background-color: rgb(245, 221, 0);
+    position: fixed;
+    right:  10px;
+    top: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    animation: out-in 500ms ease-in-out;
+}
+
+.hint > b {
+    text-align: center;
+}
+
+
+@keyframes out-in {
+    from {
+        top: 50%;
+        opacity: 0;
+    }
+    
+    to {
+        top: 75%;
+        opacity: 1;
+    }
+}
