@@ -2,5 +2,7 @@
 
 ## In this project used
 
-### React 
+### React , API: https://fortniteapi.io/
 The peculiarity of this program is that it uses "fetch" requests instead of Axios and useReducer instead of Redux.
+
+
